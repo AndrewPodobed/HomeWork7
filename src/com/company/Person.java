@@ -11,19 +11,15 @@ public final class Person {
         this.gender = gender;
     }
 
-    public Person() {
-
-    }
-
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Person)) return false;
         Person person = (Person) o;
-        return firstName == person.firstName &&
-                lastName == person.lastName &&
-                gender == person.gender;
+        return firstName.equals(person.firstName) &&
+                lastName.equals(person.lastName) &&
+                gender.equals(person.gender);
     }
 
     @Override
